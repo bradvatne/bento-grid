@@ -2,15 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --light-purp: #d8d1fc;
+  --dark-purp: #7551dc;
+  --light-yellow: #f9eee2;
+  --dark-yellow: #ffcc6a;
+}
+
 @layer components {
   .text-preset-1 {
     @apply font-medium;
     font-size: 62px;
-    line-height: 93.5%; /* Example line height */
-    letter-spacing: -3px; /* Example letter spacing */
+    line-height: 93.5%;
+    letter-spacing: -3px;
   }
 
-  /* Add more presets as needed */
   .text-preset-2 {
     @apply font-medium;
     font-size: 40px;
@@ -28,6 +34,183 @@
   .text-preset-4 {
     font-size: 18px;
     line-height: 111%;
+    font-weight: 400;
     letter-spacing: 0;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bento-grid {
+  display: grid;
+  max-width: 1120px;
+  margin: 2rem;
+  width: 100%;
+  gap: 32px;
+  grid-template-rows: repeat(4, 13rem);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "a b b c"
+    "a b b c"
+    "d b b c"
+    "d e f f";
+}
+
+.inner-bento {
+  display: grid;
+  gap: 32px;
+  grid-template-rows: 324px 246px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "inner-a inner-a"
+    "inner-b inner-c";
+}
+
+.inner-bento > div {
+  border-radius: 10px;
+}
+
+.inner-a {
+  background-color: var(--dark-purp);
+  grid-area: inner-a;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-a > img {
+  width: 192px;
+  height: 32px;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.inner-b {
+  grid-area: inner-b;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.inner-b > p {
+  padding: 0px 24px;
+}
+
+.platform-image {
+  position: relative;
+  max-width: 100%;
+  right: -2rem;
+  margin-bottom: 20px;
+}
+
+.inner-c {
+  grid-area: inner-c;
+}
+
+.bento-grid > div {
+  border-radius: 10px;
+}
+
+.bento-a {
+  background-color: var(--light-yellow);
+  grid-area: a;
+  display: flex;
+  flex-direction: column;
+  padding: 78px 32px;
+  gap: 24px;
+}
+
+.bento-b {
+  grid-area: b;
+}
+
+.bento-c {
+  background-color: var(--light-purp);
+  grid-area: c;
+}
+
+.bento-d {
+  background-color: var(--dark-yellow);
+  grid-area: d;
+}
+
+.bento-e {
+  grid-area: e;
+}
+
+.bento-f {
+  background-color: var(--dark-purp);
+  grid-area: f;
+}
+
+.social-media {
+  padding: 0px 76px;
+}
+
+@media (max-width: 1000px) {
+  .bento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "b b"
+      "c c"
+      "f f"
+      "d d"
+      "a e";
+  }
+  .text-preset-2 {
+    @apply font-medium;
+    font-size: 36px;
+    line-height: 90%;
+    letter-spacing: -6%;
+  }
+  .text-preset-1 {
+    @apply font-medium;
+    font-size: 54px;
+    line-height: 48px;
+    letter-spacing: -3px;
+  }
+}
+
+@media (max-width: 450px) {
+  .bento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 16px;
+    grid-template-areas:
+      "b b"
+      "c c"
+      "f f"
+      "d d"
+      "a a"
+      "e e";
+  }
+  .inner-bento {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "inner-a"
+      "inner-b"
+      "inner-c";
+  }
+  .text-preset-1 {
+    @apply font-medium;
+    font-size: 46px;
+    line-height: 42px;
+    letter-spacing: -4%;
+  }
+  .text-preset-2 {
+    @apply font-medium;
+    font-size: 32px;
+    line-height: 90%;
+    letter-spacing: -6%;
+  }
+  .social-media {
+    padding: 0px 32px;
   }
 }
