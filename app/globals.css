@@ -111,6 +111,14 @@ main {
 
 .inner-c {
   grid-area: inner-c;
+  padding: 24px 24px 0px 24px;
+  position: relative;
+  background-color: var(--dark-yellow);
+  overflow: hidden;
+}
+
+.inner-c > img {
+  margin-top: 16px;
 }
 
 .bento-grid > div {

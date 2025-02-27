@@ -45,7 +45,15 @@ export default function Home() {
               Manage multiple accounts and platforms.
             </p>
           </div>
-          <div className="inner-c">3</div>
+          <div className="inner-c">
+            <p className="text-preset-3">
+              Maintain a consistent posting schedule.
+            </p>
+            <img
+              src="/images/illustration-consistent-schedule.webp"
+              alt="Calendar Illustration"
+            />
+          </div>
         </div>
         <div className="bento-c">c</div>
         <div className="bento-d">d</div>
