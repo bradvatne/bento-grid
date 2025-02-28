@@ -119,6 +119,7 @@ main {
 
 .inner-c > img {
   margin-top: 16px;
+  max-width: 208px;
 }
 
 .bento-grid > div {
@@ -172,17 +173,26 @@ main {
       "d d"
       "a e";
   }
+  .text-preset-1 {
+    @apply font-medium;
+    font-size: 54px;
+    line-height: 48px;
+    letter-spacing: -3px;
+  }
   .text-preset-2 {
     @apply font-medium;
     font-size: 36px;
     line-height: 90%;
     letter-spacing: -6%;
   }
-  .text-preset-1 {
-    @apply font-medium;
-    font-size: 54px;
-    line-height: 48px;
-    letter-spacing: -3px;
+  .text-preset-3 {
+    font-size: 28px;
+    line-height: 26px;
+    letter-spacing: -6%;
+  }
+  .inner-b > p {
+    position: absolute;
+    bottom: 24px;
   }
 }
 
@@ -218,7 +228,18 @@ main {
     line-height: 90%;
     letter-spacing: -6%;
   }
+  .text-preset-3 {
+    font-size: 28px;
+    line-height: 26px;
+    letter-spacing: -6%;
+  }
   .social-media {
     padding: 0px 32px;
+  }
+  .inner-c {
+    padding: 16px 16px 0px 16px;
+  }
+  .inner-b > p {
+    position: relative;
   }
 }
